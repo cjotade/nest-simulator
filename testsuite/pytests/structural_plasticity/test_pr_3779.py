@@ -39,6 +39,7 @@ have_mpi = nest.build_info["have_mpi"]
 test_with_mpi = have_mpi and HAVE_MPI4PY and nest.num_processes > 1
 HAVE_GSL = nest.build_info["have_gsl"]
 
+
 class TestGlobalShuffle(unittest.TestCase):
     def setUp(self):
         nest.ResetKernel()
@@ -132,6 +133,7 @@ class TestGlobalShuffle(unittest.TestCase):
                 f"times={times}, sizes={sizes}"
             ),
         )
+
 
 def suite():
     test_suite = unittest.makeSuite(TestGlobalShuffle, "test")
