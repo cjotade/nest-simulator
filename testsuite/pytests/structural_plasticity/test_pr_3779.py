@@ -31,7 +31,7 @@ import nest
 # This only happens if we explicitly import MPI.
 try:
     from mpi4py import MPI
-    
+
     HAVE_MPI4PY = True
 except (ImportError, RuntimeError):
     HAVE_MPI4PY = False
